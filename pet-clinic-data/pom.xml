@@ -8,6 +8,11 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>pet-clinic-data</artifactId>
+	
+	<!-- new jdk 11+ -->
+	<properties>
+		<spring-boot.repackage.skip>true</spring-boot.repackage.skip>
+	</properties>
 
 	<dependencies>
 		<dependency>
@@ -38,24 +43,11 @@
 		</dependency>
 	</dependencies>
 	
-	<build>
-		<!-- Note:
-			As in the video #48 i leave this here (the "maven-pluguin") BUT when i run the command 
-			"mvn package" throw an error on the pet-clinic-data (NO found main class)-->
+	<build>		
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-						<configuration>
-							<skip>true</skip>
-						</configuration>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>
