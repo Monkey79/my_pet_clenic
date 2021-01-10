@@ -21,18 +21,12 @@
 	<properties>
 		<java.version>11</java.version>
 	</properties>
-
-	<dependencies>
-	</dependencies>
-
+	
 	<modules>
 		<module>pet-clinic-data</module>
 		<module>pet-clinic-web</module>
 	</modules>
 	
-	<!-- NOTE:
-		im not sure if i have to leave the plugin also here..but anyway 
-		i tried leave it and not and i have the same issue.. -->
 	<build>
 		<plugins>
 			<plugin>
